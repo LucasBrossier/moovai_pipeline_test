@@ -6,3 +6,6 @@ fastapi_pagination
 pytest
 duckdb
 dbt-duckdb
+
+black
+pylint
