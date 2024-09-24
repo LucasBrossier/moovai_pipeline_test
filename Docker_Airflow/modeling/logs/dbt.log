@@ -23127,3 +23127,2168 @@ having count(*) > 1
 [0m07:41:38.996184 [debug] [MainThread]: Command `dbt test` failed at 07:41:38.996145 after 0.56 seconds
 [0m07:41:38.996363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d84a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d6b440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ab2630>]}
 [0m07:41:38.996516 [debug] [MainThread]: Flushing usage events
+[0m08:15:01.589592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122851820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124106d20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124106a20>]}
+
+
+============================== 08:15:01.592407 | 7ecf6633-aa42-4792-a353-db4222580e07 ==============================
+[0m08:15:01.592407 [info ] [MainThread]: Running with dbt=1.8.6
+[0m08:15:01.592712 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/brossierlucas/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/brossierlucas/programmation/moovai_pipeline-master/Docker_Airflow/modeling/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m08:15:02.505060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7ecf6633-aa42-4792-a353-db4222580e07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121b501d0>]}
+[0m08:15:02.528305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7ecf6633-aa42-4792-a353-db4222580e07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067280b0>]}
+[0m08:15:02.530260 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m08:15:02.572041 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m08:15:02.622759 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m08:15:02.623080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7ecf6633-aa42-4792-a353-db4222580e07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124287dd0>]}
+[0m08:15:03.166668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7ecf6633-aa42-4792-a353-db4222580e07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1246919a0>]}
+[0m08:15:03.215301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7ecf6633-aa42-4792-a353-db4222580e07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1249456d0>]}
+[0m08:15:03.215576 [info ] [MainThread]: Found 8 models, 4 data tests, 3 sources, 416 macros
+[0m08:15:03.215741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7ecf6633-aa42-4792-a353-db4222580e07', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12453d8e0>]}
+[0m08:15:03.216748 [info ] [MainThread]: 
+[0m08:15:03.217049 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:15:03.219365 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_moovitamix'
+[0m08:15:03.276968 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix"
+[0m08:15:03.277197 [debug] [ThreadPool]: On list_moovitamix: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m08:15:03.277338 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:15:03.280755 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m08:15:03.280948 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m08:15:03.281293 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:15:03.281428 [debug] [MainThread]: Connection 'list_moovitamix' was properly closed.
+[0m08:15:03.281564 [info ] [MainThread]: 
+[0m08:15:03.281717 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.06 seconds (0.06s).
+[0m08:15:03.281927 [error] [MainThread]: Encountered an error:
+Runtime Error
+  IO Error: Cannot open file "/Users/brossierlucas/programmation/moovai_pipeline_test/dags/moovitamix.db": No such file or directory
+[0m08:15:03.314242 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.7626758, "process_user_time": 1.519585, "process_kernel_time": 0.191838, "process_mem_max_rss": "127795200", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:15:03.314593 [debug] [MainThread]: Command `dbt run` failed at 08:15:03.314540 after 1.76 seconds
+[0m08:15:03.314808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x122851820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x124a21460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1246de840>]}
+[0m08:15:03.315008 [debug] [MainThread]: Flushing usage events
+[0m08:15:57.218840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1039d7350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c6cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c69f0>]}
+
+
+============================== 08:15:57.221565 | b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7 ==============================
+[0m08:15:57.221565 [info ] [MainThread]: Running with dbt=1.8.6
+[0m08:15:57.221878 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/brossierlucas/programmation/moovai_pipeline-master/Docker_Airflow/modeling/logs', 'version_check': 'True', 'profiles_dir': '/Users/brossierlucas/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m08:15:57.404337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1033e1910>]}
+[0m08:15:57.428752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103ee3c20>]}
+[0m08:15:57.431831 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m08:15:57.443266 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m08:15:57.491509 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m08:15:57.491831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103a60ef0>]}
+[0m08:15:58.041385 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052c83e0>]}
+[0m08:15:58.089300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054d4740>]}
+[0m08:15:58.089588 [info ] [MainThread]: Found 8 models, 4 data tests, 3 sources, 416 macros
+[0m08:15:58.089761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105255490>]}
+[0m08:15:58.090718 [info ] [MainThread]: 
+[0m08:15:58.091025 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:15:58.093561 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_moovitamix'
+[0m08:15:58.150292 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix"
+[0m08:15:58.150520 [debug] [ThreadPool]: On list_moovitamix: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m08:15:58.150662 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:15:58.165414 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m08:15:58.166406 [debug] [ThreadPool]: On list_moovitamix: Close
+[0m08:15:58.167838 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_moovitamix, now create_moovitamix_main)
+[0m08:15:58.168067 [debug] [ThreadPool]: Creating schema "database: "moovitamix"
+schema: "main"
+"
+[0m08:15:58.171350 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:15:58.171521 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='moovitamix'
+        and type='sqlite'
+    
+  
+[0m08:15:58.171651 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:15:58.174513 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:15:58.175188 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:15:58.175341 [debug] [ThreadPool]: On create_moovitamix_main: BEGIN
+[0m08:15:58.175505 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:15:58.175627 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:15:58.175751 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+    
+        create schema if not exists "moovitamix"."main"
+    
+[0m08:15:58.176323 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:15:58.176717 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:15:58.176847 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:15:58.176961 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:15:58.177108 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:15:58.177238 [debug] [ThreadPool]: On create_moovitamix_main: Close
+[0m08:15:58.178239 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_moovitamix_main, now list_moovitamix_main)
+[0m08:15:58.180849 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:15:58.181009 [debug] [ThreadPool]: On list_moovitamix_main: BEGIN
+[0m08:15:58.181128 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:15:58.183687 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:15:58.183848 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:15:58.183996 [debug] [ThreadPool]: On list_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix_main"} */
+select
+      'moovitamix' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'moovitamix'
+  
+[0m08:15:58.196280 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m08:15:58.197002 [debug] [ThreadPool]: On list_moovitamix_main: ROLLBACK
+[0m08:15:58.197900 [debug] [ThreadPool]: Failed to rollback 'list_moovitamix_main'
+[0m08:15:58.198044 [debug] [ThreadPool]: On list_moovitamix_main: Close
+[0m08:15:58.199171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102e30080>]}
+[0m08:15:58.199432 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:15:58.199591 [debug] [MainThread]: On master: BEGIN
+[0m08:15:58.199716 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:15:58.202450 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:15:58.202627 [debug] [MainThread]: On master: COMMIT
+[0m08:15:58.202766 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:15:58.202885 [debug] [MainThread]: On master: COMMIT
+[0m08:15:58.203050 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:15:58.203180 [debug] [MainThread]: On master: Close
+[0m08:15:58.203687 [info ] [MainThread]: Concurrency: 1 threads (target='local')
+[0m08:15:58.203854 [info ] [MainThread]: 
+[0m08:15:58.205396 [debug] [Thread-1 (]: Began running node model.dbt_project.src_listen
+[0m08:15:58.205650 [info ] [Thread-1 (]: 1 of 8 START sql view model main.src_listen .................................... [RUN]
+[0m08:15:58.205850 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_moovitamix_main, now model.dbt_project.src_listen)
+[0m08:15:58.206007 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_listen
+[0m08:15:58.209412 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_listen"
+[0m08:15:58.210178 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_listen
+[0m08:15:58.225187 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_listen"
+[0m08:15:58.225734 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:15:58.225902 [debug] [Thread-1 (]: On model.dbt_project.src_listen: BEGIN
+[0m08:15:58.226051 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:15:58.229154 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:15:58.229404 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:15:58.229569 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+
+  
+  create view "moovitamix"."main"."src_listen__dbt_tmp" as (
+    
+
+with cte_src_listen as (
+
+
+    select * from moovai_data.listen_history
+    WHERE listen_timestamp = CURRENT_DATE
+)
+
+select *
+from cte_src_listen
+  );
+
+[0m08:15:58.242273 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+
+  
+  create view "moovitamix"."main"."src_listen__dbt_tmp" as (
+    
+
+with cte_src_listen as (
+
+
+    select * from moovai_data.listen_history
+    WHERE listen_timestamp = CURRENT_DATE
+)
+
+select *
+from cte_src_listen
+  );
+
+[0m08:15:58.242509 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:15:58.242740 [debug] [Thread-1 (]: On model.dbt_project.src_listen: ROLLBACK
+[0m08:15:58.247435 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_listen'
+[0m08:15:58.247614 [debug] [Thread-1 (]: On model.dbt_project.src_listen: Close
+[0m08:15:58.249469 [debug] [Thread-1 (]: Runtime Error in model src_listen (dbt_project/models/01_source_layer/src_listen.sql)
+  Catalog Error: Table with name listen_history does not exist!
+  Did you mean "moovitamix.listen_history"?
+  LINE 10:     select * from moovai_data.listen_history
+                             ^
+[0m08:15:58.250181 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1054d4800>]}
+[0m08:15:58.250480 [error] [Thread-1 (]: 1 of 8 ERROR creating sql view model main.src_listen ........................... [[31mERROR[0m in 0.04s]
+[0m08:15:58.250763 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_listen
+[0m08:15:58.250957 [debug] [Thread-1 (]: Began running node model.dbt_project.src_tracks
+[0m08:15:58.251573 [info ] [Thread-1 (]: 2 of 8 START sql view model main.src_tracks .................................... [RUN]
+[0m08:15:58.251813 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_listen, now model.dbt_project.src_tracks)
+[0m08:15:58.251982 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_tracks
+[0m08:15:58.254176 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_tracks"
+[0m08:15:58.254571 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_tracks
+[0m08:15:58.256004 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_tracks"
+[0m08:15:58.256307 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:15:58.256466 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: BEGIN
+[0m08:15:58.256608 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:15:58.259447 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:15:58.259645 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:15:58.259818 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovai_data.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:15:58.268774 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovai_data.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:15:58.268983 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:15:58.269196 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: ROLLBACK
+[0m08:15:58.270707 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_tracks'
+[0m08:15:58.270874 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: Close
+[0m08:15:58.272774 [debug] [Thread-1 (]: Runtime Error in model src_tracks (dbt_project/models/01_source_layer/src_tracks.sql)
+  Catalog Error: Table with name tracks does not exist!
+  Did you mean "moovitamix.tracks"?
+  LINE 10:     select * from moovai_data.tracks
+                             ^
+[0m08:15:58.272991 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104596030>]}
+[0m08:15:58.273275 [error] [Thread-1 (]: 2 of 8 ERROR creating sql view model main.src_tracks ........................... [[31mERROR[0m in 0.02s]
+[0m08:15:58.273530 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_tracks
+[0m08:15:58.273711 [debug] [Thread-1 (]: Began running node model.dbt_project.src_users
+[0m08:15:58.273893 [info ] [Thread-1 (]: 3 of 8 START sql view model main.src_users ..................................... [RUN]
+[0m08:15:58.274084 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_tracks, now model.dbt_project.src_users)
+[0m08:15:58.274231 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_users
+[0m08:15:58.275541 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_users"
+[0m08:15:58.275936 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_users
+[0m08:15:58.277354 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_users"
+[0m08:15:58.277659 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:15:58.277804 [debug] [Thread-1 (]: On model.dbt_project.src_users: BEGIN
+[0m08:15:58.277940 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:15:58.280742 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:15:58.280932 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:15:58.281096 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovai_data.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:15:58.290193 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovai_data.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:15:58.290439 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:15:58.290667 [debug] [Thread-1 (]: On model.dbt_project.src_users: ROLLBACK
+[0m08:15:58.292165 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_users'
+[0m08:15:58.292334 [debug] [Thread-1 (]: On model.dbt_project.src_users: Close
+[0m08:15:58.294153 [debug] [Thread-1 (]: Runtime Error in model src_users (dbt_project/models/01_source_layer/src_users.sql)
+  Catalog Error: Table with name users does not exist!
+  Did you mean "moovitamix.users"?
+  LINE 9:     select * from moovai_data.users
+                            ^
+[0m08:15:58.294358 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b7eacdbe-db12-4cee-bff6-e45bc6ccfaf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051fa930>]}
+[0m08:15:58.294638 [error] [Thread-1 (]: 3 of 8 ERROR creating sql view model main.src_users ............................ [[31mERROR[0m in 0.02s]
+[0m08:15:58.294901 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_users
+[0m08:15:58.295148 [debug] [Thread-1 (]: Began running node model.dbt_project.int_fact_listen
+[0m08:15:58.295361 [info ] [Thread-1 (]: 4 of 8 SKIP relation main.int_fact_listen ...................................... [[33mSKIP[0m]
+[0m08:15:58.295717 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_fact_listen
+[0m08:15:58.295935 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_tracks
+[0m08:15:58.296123 [info ] [Thread-1 (]: 5 of 8 SKIP relation main.int_dim_tracks ....................................... [[33mSKIP[0m]
+[0m08:15:58.296317 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_tracks
+[0m08:15:58.296477 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_users
+[0m08:15:58.296630 [info ] [Thread-1 (]: 6 of 8 SKIP relation main.int_dim_users ........................................ [[33mSKIP[0m]
+[0m08:15:58.296864 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_users
+[0m08:15:58.297111 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_tracks
+[0m08:15:58.297276 [info ] [Thread-1 (]: 7 of 8 SKIP relation main.mart_listen_and_tracks ............................... [[33mSKIP[0m]
+[0m08:15:58.297453 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_tracks
+[0m08:15:58.297618 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_users
+[0m08:15:58.297772 [info ] [Thread-1 (]: 8 of 8 SKIP relation main.mart_listen_and_users ................................ [[33mSKIP[0m]
+[0m08:15:58.297965 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_users
+[0m08:15:58.298518 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:15:58.298655 [debug] [MainThread]: On master: BEGIN
+[0m08:15:58.298771 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:15:58.301550 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:15:58.301712 [debug] [MainThread]: On master: COMMIT
+[0m08:15:58.301838 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:15:58.301952 [debug] [MainThread]: On master: COMMIT
+[0m08:15:58.302106 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:15:58.302228 [debug] [MainThread]: On master: Close
+[0m08:15:58.302727 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:15:58.302854 [debug] [MainThread]: Connection 'model.dbt_project.src_users' was properly closed.
+[0m08:15:58.303023 [info ] [MainThread]: 
+[0m08:15:58.303164 [info ] [MainThread]: Finished running 3 view models, 3 incremental models, 2 table models in 0 hours 0 minutes and 0.21 seconds (0.21s).
+[0m08:15:58.303641 [debug] [MainThread]: Command end result
+[0m08:15:58.317000 [info ] [MainThread]: 
+[0m08:15:58.317234 [info ] [MainThread]: [31mCompleted with 3 errors and 0 warnings:[0m
+[0m08:15:58.317376 [info ] [MainThread]: 
+[0m08:15:58.317547 [error] [MainThread]:   Runtime Error in model src_listen (dbt_project/models/01_source_layer/src_listen.sql)
+  Catalog Error: Table with name listen_history does not exist!
+  Did you mean "moovitamix.listen_history"?
+  LINE 10:     select * from moovai_data.listen_history
+                             ^
+[0m08:15:58.317681 [info ] [MainThread]: 
+[0m08:15:58.317833 [error] [MainThread]:   Runtime Error in model src_tracks (dbt_project/models/01_source_layer/src_tracks.sql)
+  Catalog Error: Table with name tracks does not exist!
+  Did you mean "moovitamix.tracks"?
+  LINE 10:     select * from moovai_data.tracks
+                             ^
+[0m08:15:58.317960 [info ] [MainThread]: 
+[0m08:15:58.318115 [error] [MainThread]:   Runtime Error in model src_users (dbt_project/models/01_source_layer/src_users.sql)
+  Catalog Error: Table with name users does not exist!
+  Did you mean "moovitamix.users"?
+  LINE 9:     select * from moovai_data.users
+                            ^
+[0m08:15:58.318247 [info ] [MainThread]: 
+[0m08:15:58.318383 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=5 TOTAL=8
+[0m08:15:58.319930 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.1341279, "process_user_time": 1.505312, "process_kernel_time": 0.167508, "process_mem_max_rss": "137723904", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:15:58.320173 [debug] [MainThread]: Command `dbt run` failed at 08:15:58.320129 after 1.13 seconds
+[0m08:15:58.320359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c6660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041e1e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10476ca70>]}
+[0m08:15:58.320529 [debug] [MainThread]: Flushing usage events
+[0m08:18:03.935289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1039ef8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fa2d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fa2a80>]}
+
+
+============================== 08:18:03.938027 | 93ebda95-13fb-4398-aa6f-29ac39b7034e ==============================
+[0m08:18:03.938027 [info ] [MainThread]: Running with dbt=1.8.6
+[0m08:18:03.938347 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/brossierlucas/programmation/moovai_pipeline-master/Docker_Airflow/modeling/logs', 'debug': 'False', 'profiles_dir': '/Users/brossierlucas/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:18:04.123961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040729f0>]}
+[0m08:18:04.147445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fa0080>]}
+[0m08:18:04.149181 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m08:18:04.159545 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m08:18:04.224649 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m08:18:04.225039 [debug] [MainThread]: Partial parsing: updated file: dbt_project://dbt_project/models/01_source_layer/sources.yml
+[0m08:18:04.304363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1042ae120>]}
+[0m08:18:04.353402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10439ac60>]}
+[0m08:18:04.353689 [info ] [MainThread]: Found 8 models, 4 data tests, 3 sources, 416 macros
+[0m08:18:04.353865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043a05f0>]}
+[0m08:18:04.354839 [info ] [MainThread]: 
+[0m08:18:04.355151 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:18:04.357476 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_moovitamix'
+[0m08:18:04.386380 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix"
+[0m08:18:04.386614 [debug] [ThreadPool]: On list_moovitamix: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m08:18:04.386759 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:18:04.401947 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m08:18:04.403243 [debug] [ThreadPool]: On list_moovitamix: Close
+[0m08:18:04.404708 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_moovitamix, now create_moovitamix_main)
+[0m08:18:04.404919 [debug] [ThreadPool]: Creating schema "database: "moovitamix"
+schema: "main"
+"
+[0m08:18:04.408178 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:04.408343 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='moovitamix'
+        and type='sqlite'
+    
+  
+[0m08:18:04.408484 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:18:04.412161 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m08:18:04.413192 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:04.413347 [debug] [ThreadPool]: On create_moovitamix_main: BEGIN
+[0m08:18:04.413521 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:18:04.413653 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:04.413782 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+    
+        create schema if not exists "moovitamix"."main"
+    
+[0m08:18:04.414814 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m08:18:04.415285 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:18:04.415432 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:04.415560 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:18:04.415725 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:18:04.415868 [debug] [ThreadPool]: On create_moovitamix_main: Close
+[0m08:18:04.418864 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_moovitamix_main, now list_moovitamix_main)
+[0m08:18:04.421515 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:18:04.421664 [debug] [ThreadPool]: On list_moovitamix_main: BEGIN
+[0m08:18:04.421783 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:18:04.424678 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:18:04.424854 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:18:04.425003 [debug] [ThreadPool]: On list_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix_main"} */
+select
+      'moovitamix' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'moovitamix'
+  
+[0m08:18:04.440229 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m08:18:04.441000 [debug] [ThreadPool]: On list_moovitamix_main: ROLLBACK
+[0m08:18:04.441936 [debug] [ThreadPool]: Failed to rollback 'list_moovitamix_main'
+[0m08:18:04.442077 [debug] [ThreadPool]: On list_moovitamix_main: Close
+[0m08:18:04.443150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041bb020>]}
+[0m08:18:04.443379 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:04.443510 [debug] [MainThread]: On master: BEGIN
+[0m08:18:04.443637 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:18:04.446263 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:18:04.446434 [debug] [MainThread]: On master: COMMIT
+[0m08:18:04.446568 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:04.446682 [debug] [MainThread]: On master: COMMIT
+[0m08:18:04.446835 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:18:04.446967 [debug] [MainThread]: On master: Close
+[0m08:18:04.447490 [info ] [MainThread]: Concurrency: 1 threads (target='local')
+[0m08:18:04.447693 [info ] [MainThread]: 
+[0m08:18:04.449132 [debug] [Thread-1 (]: Began running node model.dbt_project.src_listen
+[0m08:18:04.449400 [info ] [Thread-1 (]: 1 of 8 START sql view model main.src_listen .................................... [RUN]
+[0m08:18:04.449622 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_moovitamix_main, now model.dbt_project.src_listen)
+[0m08:18:04.449788 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_listen
+[0m08:18:04.453334 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_listen"
+[0m08:18:04.453721 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_listen
+[0m08:18:04.468642 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_listen"
+[0m08:18:04.469100 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:04.469286 [debug] [Thread-1 (]: On model.dbt_project.src_listen: BEGIN
+[0m08:18:04.469439 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:04.472506 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:04.472715 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:04.472890 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+
+  
+  create view "moovitamix"."main"."src_listen__dbt_tmp" as (
+    
+
+with cte_src_listen as (
+
+
+    select * from moovai_data.listen_history
+    WHERE listen_timestamp = CURRENT_DATE
+)
+
+select *
+from cte_src_listen
+  );
+
+[0m08:18:04.485946 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+
+  
+  create view "moovitamix"."main"."src_listen__dbt_tmp" as (
+    
+
+with cte_src_listen as (
+
+
+    select * from moovai_data.listen_history
+    WHERE listen_timestamp = CURRENT_DATE
+)
+
+select *
+from cte_src_listen
+  );
+
+[0m08:18:04.486148 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:18:04.486384 [debug] [Thread-1 (]: On model.dbt_project.src_listen: ROLLBACK
+[0m08:18:04.491315 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_listen'
+[0m08:18:04.491494 [debug] [Thread-1 (]: On model.dbt_project.src_listen: Close
+[0m08:18:04.493358 [debug] [Thread-1 (]: Runtime Error in model src_listen (dbt_project/models/01_source_layer/src_listen.sql)
+  Catalog Error: Table with name listen_history does not exist!
+  Did you mean "moovitamix.listen_history"?
+  LINE 10:     select * from moovai_data.listen_history
+                             ^
+[0m08:18:04.494194 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10353e1e0>]}
+[0m08:18:04.494618 [error] [Thread-1 (]: 1 of 8 ERROR creating sql view model main.src_listen ........................... [[31mERROR[0m in 0.04s]
+[0m08:18:04.494933 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_listen
+[0m08:18:04.495136 [debug] [Thread-1 (]: Began running node model.dbt_project.src_tracks
+[0m08:18:04.495755 [info ] [Thread-1 (]: 2 of 8 START sql view model main.src_tracks .................................... [RUN]
+[0m08:18:04.495988 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_listen, now model.dbt_project.src_tracks)
+[0m08:18:04.496155 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_tracks
+[0m08:18:04.497542 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_tracks"
+[0m08:18:04.497869 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_tracks
+[0m08:18:04.499335 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_tracks"
+[0m08:18:04.499633 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:04.499790 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: BEGIN
+[0m08:18:04.499929 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:04.502799 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:04.502984 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:04.503143 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovai_data.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:18:04.511920 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovai_data.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:18:04.512107 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:18:04.512307 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: ROLLBACK
+[0m08:18:04.513797 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_tracks'
+[0m08:18:04.513955 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: Close
+[0m08:18:04.515714 [debug] [Thread-1 (]: Runtime Error in model src_tracks (dbt_project/models/01_source_layer/src_tracks.sql)
+  Catalog Error: Table with name tracks does not exist!
+  Did you mean "moovitamix.tracks"?
+  LINE 10:     select * from moovai_data.tracks
+                             ^
+[0m08:18:04.515936 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10494ba70>]}
+[0m08:18:04.516208 [error] [Thread-1 (]: 2 of 8 ERROR creating sql view model main.src_tracks ........................... [[31mERROR[0m in 0.02s]
+[0m08:18:04.516463 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_tracks
+[0m08:18:04.516645 [debug] [Thread-1 (]: Began running node model.dbt_project.src_users
+[0m08:18:04.516835 [info ] [Thread-1 (]: 3 of 8 START sql view model main.src_users ..................................... [RUN]
+[0m08:18:04.517085 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_tracks, now model.dbt_project.src_users)
+[0m08:18:04.517254 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_users
+[0m08:18:04.518456 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_users"
+[0m08:18:04.518923 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_users
+[0m08:18:04.521471 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_users"
+[0m08:18:04.522052 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:04.522215 [debug] [Thread-1 (]: On model.dbt_project.src_users: BEGIN
+[0m08:18:04.522352 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:04.525174 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:04.525364 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:04.525528 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovai_data.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:18:04.534362 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovai_data.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:18:04.534550 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:18:04.534763 [debug] [Thread-1 (]: On model.dbt_project.src_users: ROLLBACK
+[0m08:18:04.536256 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_users'
+[0m08:18:04.536421 [debug] [Thread-1 (]: On model.dbt_project.src_users: Close
+[0m08:18:04.538295 [debug] [Thread-1 (]: Runtime Error in model src_users (dbt_project/models/01_source_layer/src_users.sql)
+  Catalog Error: Table with name users does not exist!
+  Did you mean "moovitamix.users"?
+  LINE 9:     select * from moovai_data.users
+                            ^
+[0m08:18:04.538492 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '93ebda95-13fb-4398-aa6f-29ac39b7034e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104948b00>]}
+[0m08:18:04.538769 [error] [Thread-1 (]: 3 of 8 ERROR creating sql view model main.src_users ............................ [[31mERROR[0m in 0.02s]
+[0m08:18:04.539027 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_users
+[0m08:18:04.539206 [debug] [Thread-1 (]: Began running node model.dbt_project.int_fact_listen
+[0m08:18:04.539369 [info ] [Thread-1 (]: 4 of 8 SKIP relation main.int_fact_listen ...................................... [[33mSKIP[0m]
+[0m08:18:04.539628 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_fact_listen
+[0m08:18:04.539799 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_tracks
+[0m08:18:04.539955 [info ] [Thread-1 (]: 5 of 8 SKIP relation main.int_dim_tracks ....................................... [[33mSKIP[0m]
+[0m08:18:04.540158 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_tracks
+[0m08:18:04.540398 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_users
+[0m08:18:04.540564 [info ] [Thread-1 (]: 6 of 8 SKIP relation main.int_dim_users ........................................ [[33mSKIP[0m]
+[0m08:18:04.540749 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_users
+[0m08:18:04.540915 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_tracks
+[0m08:18:04.541068 [info ] [Thread-1 (]: 7 of 8 SKIP relation main.mart_listen_and_tracks ............................... [[33mSKIP[0m]
+[0m08:18:04.541296 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_tracks
+[0m08:18:04.541486 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_users
+[0m08:18:04.541644 [info ] [Thread-1 (]: 8 of 8 SKIP relation main.mart_listen_and_users ................................ [[33mSKIP[0m]
+[0m08:18:04.541815 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_users
+[0m08:18:04.542346 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:04.542480 [debug] [MainThread]: On master: BEGIN
+[0m08:18:04.542597 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:18:04.545502 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:18:04.545762 [debug] [MainThread]: On master: COMMIT
+[0m08:18:04.545900 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:04.546046 [debug] [MainThread]: On master: COMMIT
+[0m08:18:04.546217 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:18:04.546340 [debug] [MainThread]: On master: Close
+[0m08:18:04.546934 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:18:04.547100 [debug] [MainThread]: Connection 'model.dbt_project.src_users' was properly closed.
+[0m08:18:04.547295 [info ] [MainThread]: 
+[0m08:18:04.547451 [info ] [MainThread]: Finished running 3 view models, 3 incremental models, 2 table models in 0 hours 0 minutes and 0.19 seconds (0.19s).
+[0m08:18:04.547940 [debug] [MainThread]: Command end result
+[0m08:18:04.560582 [info ] [MainThread]: 
+[0m08:18:04.560902 [info ] [MainThread]: [31mCompleted with 3 errors and 0 warnings:[0m
+[0m08:18:04.561058 [info ] [MainThread]: 
+[0m08:18:04.561266 [error] [MainThread]:   Runtime Error in model src_listen (dbt_project/models/01_source_layer/src_listen.sql)
+  Catalog Error: Table with name listen_history does not exist!
+  Did you mean "moovitamix.listen_history"?
+  LINE 10:     select * from moovai_data.listen_history
+                             ^
+[0m08:18:04.561405 [info ] [MainThread]: 
+[0m08:18:04.561560 [error] [MainThread]:   Runtime Error in model src_tracks (dbt_project/models/01_source_layer/src_tracks.sql)
+  Catalog Error: Table with name tracks does not exist!
+  Did you mean "moovitamix.tracks"?
+  LINE 10:     select * from moovai_data.tracks
+                             ^
+[0m08:18:04.561690 [info ] [MainThread]: 
+[0m08:18:04.561843 [error] [MainThread]:   Runtime Error in model src_users (dbt_project/models/01_source_layer/src_users.sql)
+  Catalog Error: Table with name users does not exist!
+  Did you mean "moovitamix.users"?
+  LINE 9:     select * from moovai_data.users
+                            ^
+[0m08:18:04.561972 [info ] [MainThread]: 
+[0m08:18:04.562112 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=5 TOTAL=8
+[0m08:18:04.563629 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.6608886, "process_user_time": 1.041556, "process_kernel_time": 0.167846, "process_mem_max_rss": "134168576", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:18:04.563887 [debug] [MainThread]: Command `dbt run` failed at 08:18:04.563846 after 0.66 seconds
+[0m08:18:04.564070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103ac75f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fa2a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103fa2d50>]}
+[0m08:18:04.564228 [debug] [MainThread]: Flushing usage events
+[0m08:18:32.091481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060962a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106afeff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106afecf0>]}
+
+
+============================== 08:18:32.094407 | 70ad3e60-2071-4d8b-bb40-32faaae9ee73 ==============================
+[0m08:18:32.094407 [info ] [MainThread]: Running with dbt=1.8.6
+[0m08:18:32.094727 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/brossierlucas/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/brossierlucas/programmation/moovai_pipeline-master/Docker_Airflow/modeling/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m08:18:32.264898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c3f950>]}
+[0m08:18:32.287821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106095a90>]}
+[0m08:18:32.289788 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m08:18:32.300090 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m08:18:32.361447 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m08:18:32.361817 [debug] [MainThread]: Partial parsing: updated file: dbt_project://dbt_project/models/01_source_layer/sources.yml
+[0m08:18:32.362033 [debug] [MainThread]: Partial parsing: updated file: dbt_project://dbt_project/models/01_source_layer/src_listen.sql
+[0m08:18:32.563144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070a2810>]}
+[0m08:18:32.608766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e09250>]}
+[0m08:18:32.609051 [info ] [MainThread]: Found 8 models, 4 data tests, 3 sources, 416 macros
+[0m08:18:32.609220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ebd4c0>]}
+[0m08:18:32.610190 [info ] [MainThread]: 
+[0m08:18:32.610475 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:18:32.612857 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_moovitamix'
+[0m08:18:32.640624 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix"
+[0m08:18:32.640858 [debug] [ThreadPool]: On list_moovitamix: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m08:18:32.641002 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:18:32.655367 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m08:18:32.656784 [debug] [ThreadPool]: On list_moovitamix: Close
+[0m08:18:32.658480 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_moovitamix, now create_moovitamix_main)
+[0m08:18:32.658762 [debug] [ThreadPool]: Creating schema "database: "moovitamix"
+schema: "main"
+"
+[0m08:18:32.665273 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:32.665635 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='moovitamix'
+        and type='sqlite'
+    
+  
+[0m08:18:32.665804 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:18:32.671683 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m08:18:32.673461 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:32.673945 [debug] [ThreadPool]: On create_moovitamix_main: BEGIN
+[0m08:18:32.674365 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:18:32.674526 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:32.674878 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+    
+        create schema if not exists "moovitamix"."main"
+    
+[0m08:18:32.676809 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m08:18:32.677355 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:18:32.677575 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:32.677726 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:18:32.677957 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:18:32.678111 [debug] [ThreadPool]: On create_moovitamix_main: Close
+[0m08:18:32.680315 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_moovitamix_main, now list_moovitamix_main)
+[0m08:18:32.683504 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:18:32.683711 [debug] [ThreadPool]: On list_moovitamix_main: BEGIN
+[0m08:18:32.683848 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:18:32.687010 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:18:32.687216 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:18:32.687371 [debug] [ThreadPool]: On list_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix_main"} */
+select
+      'moovitamix' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'moovitamix'
+  
+[0m08:18:32.700981 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m08:18:32.701724 [debug] [ThreadPool]: On list_moovitamix_main: ROLLBACK
+[0m08:18:32.702657 [debug] [ThreadPool]: Failed to rollback 'list_moovitamix_main'
+[0m08:18:32.702800 [debug] [ThreadPool]: On list_moovitamix_main: Close
+[0m08:18:32.703896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072113a0>]}
+[0m08:18:32.704128 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:32.704261 [debug] [MainThread]: On master: BEGIN
+[0m08:18:32.704379 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:18:32.707095 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:18:32.707264 [debug] [MainThread]: On master: COMMIT
+[0m08:18:32.707396 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:32.707509 [debug] [MainThread]: On master: COMMIT
+[0m08:18:32.707658 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:18:32.707781 [debug] [MainThread]: On master: Close
+[0m08:18:32.708285 [info ] [MainThread]: Concurrency: 1 threads (target='local')
+[0m08:18:32.708438 [info ] [MainThread]: 
+[0m08:18:32.709655 [debug] [Thread-1 (]: Began running node model.dbt_project.src_listen
+[0m08:18:32.710048 [info ] [Thread-1 (]: 1 of 8 START sql view model main.src_listen .................................... [RUN]
+[0m08:18:32.710262 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_moovitamix_main, now model.dbt_project.src_listen)
+[0m08:18:32.710415 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_listen
+[0m08:18:32.713842 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_listen"
+[0m08:18:32.714233 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_listen
+[0m08:18:32.729368 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_listen"
+[0m08:18:32.729869 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:32.730046 [debug] [Thread-1 (]: On model.dbt_project.src_listen: BEGIN
+[0m08:18:32.730193 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:32.733080 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:32.733276 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:32.733432 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+
+  
+  create view "moovitamix"."main"."src_listen__dbt_tmp" as (
+    
+
+with cte_src_listen as (
+
+
+    select * from moovitamix.listen_history
+    WHERE listen_timestamp = CURRENT_DATE
+)
+
+select *
+from cte_src_listen
+  );
+
+[0m08:18:32.735416 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:18:32.738611 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:32.738800 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+alter view "moovitamix"."main"."src_listen__dbt_tmp" rename to "src_listen"
+[0m08:18:32.739562 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:32.746468 [debug] [Thread-1 (]: On model.dbt_project.src_listen: COMMIT
+[0m08:18:32.746649 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:32.746796 [debug] [Thread-1 (]: On model.dbt_project.src_listen: COMMIT
+[0m08:18:32.747623 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:32.749877 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:32.750052 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+drop view if exists "moovitamix"."main"."src_listen__dbt_backup" cascade
+[0m08:18:32.750273 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:32.751358 [debug] [Thread-1 (]: On model.dbt_project.src_listen: Close
+[0m08:18:32.756202 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053c7320>]}
+[0m08:18:32.756539 [info ] [Thread-1 (]: 1 of 8 OK created sql view model main.src_listen ............................... [[32mOK[0m in 0.05s]
+[0m08:18:32.756819 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_listen
+[0m08:18:32.757016 [debug] [Thread-1 (]: Began running node model.dbt_project.src_tracks
+[0m08:18:32.757315 [info ] [Thread-1 (]: 2 of 8 START sql view model main.src_tracks .................................... [RUN]
+[0m08:18:32.757542 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_listen, now model.dbt_project.src_tracks)
+[0m08:18:32.757706 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_tracks
+[0m08:18:32.758905 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_tracks"
+[0m08:18:32.759523 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_tracks
+[0m08:18:32.761077 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_tracks"
+[0m08:18:32.761436 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:32.761599 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: BEGIN
+[0m08:18:32.761748 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:32.764881 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:32.765076 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:32.765238 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovai_data.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:18:32.776896 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovai_data.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:18:32.777131 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:18:32.777412 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: ROLLBACK
+[0m08:18:32.782299 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_tracks'
+[0m08:18:32.782477 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: Close
+[0m08:18:32.784360 [debug] [Thread-1 (]: Runtime Error in model src_tracks (dbt_project/models/01_source_layer/src_tracks.sql)
+  Catalog Error: Table with name tracks does not exist!
+  Did you mean "moovitamix.tracks"?
+  LINE 10:     select * from moovai_data.tracks
+                             ^
+[0m08:18:32.784591 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076b0d10>]}
+[0m08:18:32.784883 [error] [Thread-1 (]: 2 of 8 ERROR creating sql view model main.src_tracks ........................... [[31mERROR[0m in 0.03s]
+[0m08:18:32.785171 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_tracks
+[0m08:18:32.785368 [debug] [Thread-1 (]: Began running node model.dbt_project.src_users
+[0m08:18:32.785975 [info ] [Thread-1 (]: 3 of 8 START sql view model main.src_users ..................................... [RUN]
+[0m08:18:32.786178 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_tracks, now model.dbt_project.src_users)
+[0m08:18:32.786331 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_users
+[0m08:18:32.787624 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_users"
+[0m08:18:32.787975 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_users
+[0m08:18:32.790182 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_users"
+[0m08:18:32.790468 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:32.790623 [debug] [Thread-1 (]: On model.dbt_project.src_users: BEGIN
+[0m08:18:32.790764 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:32.793589 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:32.793769 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:32.793920 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovai_data.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:18:32.802580 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovai_data.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:18:32.802764 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m08:18:32.802963 [debug] [Thread-1 (]: On model.dbt_project.src_users: ROLLBACK
+[0m08:18:32.804437 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_project.src_users'
+[0m08:18:32.804593 [debug] [Thread-1 (]: On model.dbt_project.src_users: Close
+[0m08:18:32.806342 [debug] [Thread-1 (]: Runtime Error in model src_users (dbt_project/models/01_source_layer/src_users.sql)
+  Catalog Error: Table with name users does not exist!
+  Did you mean "moovitamix.users"?
+  LINE 9:     select * from moovai_data.users
+                            ^
+[0m08:18:32.806539 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076a9880>]}
+[0m08:18:32.806807 [error] [Thread-1 (]: 3 of 8 ERROR creating sql view model main.src_users ............................ [[31mERROR[0m in 0.02s]
+[0m08:18:32.807058 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_users
+[0m08:18:32.807237 [debug] [Thread-1 (]: Began running node model.dbt_project.int_fact_listen
+[0m08:18:32.807422 [info ] [Thread-1 (]: 4 of 8 START sql incremental model main.int_fact_listen ........................ [RUN]
+[0m08:18:32.807688 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_users, now model.dbt_project.int_fact_listen)
+[0m08:18:32.807865 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_fact_listen
+[0m08:18:32.809294 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_fact_listen"
+[0m08:18:32.809753 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_fact_listen
+[0m08:18:32.828845 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_fact_listen"
+[0m08:18:32.829418 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:32.829580 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: BEGIN
+[0m08:18:32.829720 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:32.832549 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:32.832735 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:32.832896 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_fact_listen"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."int_fact_listen"
+  
+    as (
+      
+
+with cte_int_listen as (
+
+    select * from "moovitamix"."main"."src_listen"
+
+)
+
+--INSERT INTO int_listen
+select *
+from cte_int_listen
+    );
+  
+  
+  
+[0m08:18:32.834380 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:32.836914 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: COMMIT
+[0m08:18:32.837109 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:32.837258 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: COMMIT
+[0m08:18:32.837650 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:32.837994 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: Close
+[0m08:18:32.840539 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '70ad3e60-2071-4d8b-bb40-32faaae9ee73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107681d60>]}
+[0m08:18:32.840846 [info ] [Thread-1 (]: 4 of 8 OK created sql incremental model main.int_fact_listen ................... [[32mOK[0m in 0.03s]
+[0m08:18:32.841113 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_fact_listen
+[0m08:18:32.841300 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_tracks
+[0m08:18:32.841499 [info ] [Thread-1 (]: 5 of 8 SKIP relation main.int_dim_tracks ....................................... [[33mSKIP[0m]
+[0m08:18:32.841679 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_tracks
+[0m08:18:32.841847 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_users
+[0m08:18:32.842053 [info ] [Thread-1 (]: 6 of 8 SKIP relation main.int_dim_users ........................................ [[33mSKIP[0m]
+[0m08:18:32.842268 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_users
+[0m08:18:32.842453 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_tracks
+[0m08:18:32.842661 [info ] [Thread-1 (]: 7 of 8 SKIP relation main.mart_listen_and_tracks ............................... [[33mSKIP[0m]
+[0m08:18:32.842835 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_tracks
+[0m08:18:32.843006 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_users
+[0m08:18:32.843172 [info ] [Thread-1 (]: 8 of 8 SKIP relation main.mart_listen_and_users ................................ [[33mSKIP[0m]
+[0m08:18:32.843344 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_users
+[0m08:18:32.843851 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:32.843992 [debug] [MainThread]: On master: BEGIN
+[0m08:18:32.844108 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:18:32.846855 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:18:32.847024 [debug] [MainThread]: On master: COMMIT
+[0m08:18:32.847152 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:32.847268 [debug] [MainThread]: On master: COMMIT
+[0m08:18:32.847424 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:18:32.847547 [debug] [MainThread]: On master: Close
+[0m08:18:32.848055 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:18:32.848176 [debug] [MainThread]: Connection 'model.dbt_project.int_fact_listen' was properly closed.
+[0m08:18:32.848350 [info ] [MainThread]: 
+[0m08:18:32.848498 [info ] [MainThread]: Finished running 3 view models, 3 incremental models, 2 table models in 0 hours 0 minutes and 0.24 seconds (0.24s).
+[0m08:18:32.849002 [debug] [MainThread]: Command end result
+[0m08:18:32.861938 [info ] [MainThread]: 
+[0m08:18:32.862245 [info ] [MainThread]: [31mCompleted with 2 errors and 0 warnings:[0m
+[0m08:18:32.862416 [info ] [MainThread]: 
+[0m08:18:32.862670 [error] [MainThread]:   Runtime Error in model src_tracks (dbt_project/models/01_source_layer/src_tracks.sql)
+  Catalog Error: Table with name tracks does not exist!
+  Did you mean "moovitamix.tracks"?
+  LINE 10:     select * from moovai_data.tracks
+                             ^
+[0m08:18:32.862820 [info ] [MainThread]: 
+[0m08:18:32.862984 [error] [MainThread]:   Runtime Error in model src_users (dbt_project/models/01_source_layer/src_users.sql)
+  Catalog Error: Table with name users does not exist!
+  Did you mean "moovitamix.users"?
+  LINE 9:     select * from moovai_data.users
+                            ^
+[0m08:18:32.863120 [info ] [MainThread]: 
+[0m08:18:32.863270 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=2 SKIP=4 TOTAL=8
+[0m08:18:32.865308 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 0.807477, "process_user_time": 1.190466, "process_kernel_time": 0.173078, "process_mem_max_rss": "139919360", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:18:32.865622 [debug] [MainThread]: Command `dbt run` failed at 08:18:32.865576 after 0.81 seconds
+[0m08:18:32.865812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d7fb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106095b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106568440>]}
+[0m08:18:32.865981 [debug] [MainThread]: Flushing usage events
+[0m08:18:48.765183 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103bd5b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104696bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104696900>]}
+
+
+============================== 08:18:48.767950 | 1416d774-ff75-4edf-b715-9b4be00a1cb0 ==============================
+[0m08:18:48.767950 [info ] [MainThread]: Running with dbt=1.8.6
+[0m08:18:48.768268 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/brossierlucas/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/brossierlucas/programmation/moovai_pipeline-master/Docker_Airflow/modeling/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:18:48.948651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104823230>]}
+[0m08:18:48.971971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104158560>]}
+[0m08:18:48.973832 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m08:18:48.984999 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m08:18:49.047671 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m08:18:49.048017 [debug] [MainThread]: Partial parsing: updated file: dbt_project://dbt_project/models/01_source_layer/src_users.sql
+[0m08:18:49.048204 [debug] [MainThread]: Partial parsing: updated file: dbt_project://dbt_project/models/01_source_layer/src_tracks.sql
+[0m08:18:49.156483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a741a0>]}
+[0m08:18:49.205701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104aa79b0>]}
+[0m08:18:49.205977 [info ] [MainThread]: Found 8 models, 4 data tests, 3 sources, 416 macros
+[0m08:18:49.206148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1048e7c80>]}
+[0m08:18:49.207130 [info ] [MainThread]: 
+[0m08:18:49.207407 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:18:49.209669 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_moovitamix'
+[0m08:18:49.236648 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix"
+[0m08:18:49.236881 [debug] [ThreadPool]: On list_moovitamix: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m08:18:49.237027 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:18:49.253190 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m08:18:49.254534 [debug] [ThreadPool]: On list_moovitamix: Close
+[0m08:18:49.256021 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_moovitamix, now create_moovitamix_main)
+[0m08:18:49.256243 [debug] [ThreadPool]: Creating schema "database: "moovitamix"
+schema: "main"
+"
+[0m08:18:49.259488 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:49.259653 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='moovitamix'
+        and type='sqlite'
+    
+  
+[0m08:18:49.259796 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:18:49.263150 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:18:49.263983 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:49.264123 [debug] [ThreadPool]: On create_moovitamix_main: BEGIN
+[0m08:18:49.264287 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:18:49.264410 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:49.264532 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+    
+        create schema if not exists "moovitamix"."main"
+    
+[0m08:18:49.264922 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:18:49.265315 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:18:49.265444 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:18:49.265555 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:18:49.265701 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:18:49.265827 [debug] [ThreadPool]: On create_moovitamix_main: Close
+[0m08:18:49.266830 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_moovitamix_main, now list_moovitamix_main)
+[0m08:18:49.269429 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:18:49.269576 [debug] [ThreadPool]: On list_moovitamix_main: BEGIN
+[0m08:18:49.269691 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:18:49.272307 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:18:49.272472 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:18:49.272622 [debug] [ThreadPool]: On list_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix_main"} */
+select
+      'moovitamix' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'moovitamix'
+  
+[0m08:18:49.285736 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m08:18:49.286502 [debug] [ThreadPool]: On list_moovitamix_main: ROLLBACK
+[0m08:18:49.287426 [debug] [ThreadPool]: Failed to rollback 'list_moovitamix_main'
+[0m08:18:49.287584 [debug] [ThreadPool]: On list_moovitamix_main: Close
+[0m08:18:49.288775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104aa7a40>]}
+[0m08:18:49.288994 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:49.289125 [debug] [MainThread]: On master: BEGIN
+[0m08:18:49.289242 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:18:49.291997 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:18:49.292173 [debug] [MainThread]: On master: COMMIT
+[0m08:18:49.292309 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:49.292429 [debug] [MainThread]: On master: COMMIT
+[0m08:18:49.292586 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:18:49.292719 [debug] [MainThread]: On master: Close
+[0m08:18:49.293238 [info ] [MainThread]: Concurrency: 1 threads (target='local')
+[0m08:18:49.293417 [info ] [MainThread]: 
+[0m08:18:49.294762 [debug] [Thread-1 (]: Began running node model.dbt_project.src_listen
+[0m08:18:49.295014 [info ] [Thread-1 (]: 1 of 8 START sql view model main.src_listen .................................... [RUN]
+[0m08:18:49.295223 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_moovitamix_main, now model.dbt_project.src_listen)
+[0m08:18:49.295390 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_listen
+[0m08:18:49.299075 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_listen"
+[0m08:18:49.299534 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_listen
+[0m08:18:49.317078 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_listen"
+[0m08:18:49.317615 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:49.317777 [debug] [Thread-1 (]: On model.dbt_project.src_listen: BEGIN
+[0m08:18:49.317932 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.320937 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:49.321155 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:49.321324 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+
+  
+  create view "moovitamix"."main"."src_listen__dbt_tmp" as (
+    
+
+with cte_src_listen as (
+
+
+    select * from moovitamix.listen_history
+    WHERE listen_timestamp = CURRENT_DATE
+)
+
+select *
+from cte_src_listen
+  );
+
+[0m08:18:49.323273 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:18:49.326493 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:49.326698 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+alter view "moovitamix"."main"."src_listen" rename to "src_listen__dbt_backup"
+[0m08:18:49.327439 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:49.328772 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:49.328929 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+alter view "moovitamix"."main"."src_listen__dbt_tmp" rename to "src_listen"
+[0m08:18:49.329142 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.337688 [debug] [Thread-1 (]: On model.dbt_project.src_listen: COMMIT
+[0m08:18:49.337876 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:49.338027 [debug] [Thread-1 (]: On model.dbt_project.src_listen: COMMIT
+[0m08:18:49.338848 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:49.341143 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:18:49.341317 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+drop view if exists "moovitamix"."main"."src_listen__dbt_backup" cascade
+[0m08:18:49.341622 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.342818 [debug] [Thread-1 (]: On model.dbt_project.src_listen: Close
+[0m08:18:49.347026 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104add670>]}
+[0m08:18:49.347369 [info ] [Thread-1 (]: 1 of 8 OK created sql view model main.src_listen ............................... [[32mOK[0m in 0.05s]
+[0m08:18:49.347640 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_listen
+[0m08:18:49.347833 [debug] [Thread-1 (]: Began running node model.dbt_project.src_tracks
+[0m08:18:49.348106 [info ] [Thread-1 (]: 2 of 8 START sql view model main.src_tracks .................................... [RUN]
+[0m08:18:49.348299 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_listen, now model.dbt_project.src_tracks)
+[0m08:18:49.348449 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_tracks
+[0m08:18:49.349682 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_tracks"
+[0m08:18:49.349998 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_tracks
+[0m08:18:49.351447 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_tracks"
+[0m08:18:49.351731 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:49.351883 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: BEGIN
+[0m08:18:49.352024 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.354831 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:49.355031 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:49.355189 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovitamix.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:18:49.355522 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.356938 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:49.357103 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+alter view "moovitamix"."main"."src_tracks__dbt_tmp" rename to "src_tracks"
+[0m08:18:49.357326 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.357945 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: COMMIT
+[0m08:18:49.358096 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:49.358227 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: COMMIT
+[0m08:18:49.358596 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.359643 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:18:49.359810 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+drop view if exists "moovitamix"."main"."src_tracks__dbt_backup" cascade
+[0m08:18:49.360034 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.360634 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: Close
+[0m08:18:49.363122 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105064f80>]}
+[0m08:18:49.363416 [info ] [Thread-1 (]: 2 of 8 OK created sql view model main.src_tracks ............................... [[32mOK[0m in 0.01s]
+[0m08:18:49.363672 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_tracks
+[0m08:18:49.363855 [debug] [Thread-1 (]: Began running node model.dbt_project.src_users
+[0m08:18:49.364110 [info ] [Thread-1 (]: 3 of 8 START sql view model main.src_users ..................................... [RUN]
+[0m08:18:49.364292 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_tracks, now model.dbt_project.src_users)
+[0m08:18:49.364446 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_users
+[0m08:18:49.365697 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_users"
+[0m08:18:49.365988 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_users
+[0m08:18:49.367418 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_users"
+[0m08:18:49.367750 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:49.367905 [debug] [Thread-1 (]: On model.dbt_project.src_users: BEGIN
+[0m08:18:49.368049 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.371009 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:49.371206 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:49.371363 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovitamix.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:18:49.371682 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.373109 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:49.373270 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+alter view "moovitamix"."main"."src_users__dbt_tmp" rename to "src_users"
+[0m08:18:49.373493 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.374112 [debug] [Thread-1 (]: On model.dbt_project.src_users: COMMIT
+[0m08:18:49.374263 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:49.374393 [debug] [Thread-1 (]: On model.dbt_project.src_users: COMMIT
+[0m08:18:49.374782 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.375826 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:18:49.375986 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+drop view if exists "moovitamix"."main"."src_users__dbt_backup" cascade
+[0m08:18:49.376198 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.376818 [debug] [Thread-1 (]: On model.dbt_project.src_users: Close
+[0m08:18:49.379438 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10509e960>]}
+[0m08:18:49.379738 [info ] [Thread-1 (]: 3 of 8 OK created sql view model main.src_users ................................ [[32mOK[0m in 0.02s]
+[0m08:18:49.379995 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_users
+[0m08:18:49.380185 [debug] [Thread-1 (]: Began running node model.dbt_project.int_fact_listen
+[0m08:18:49.380441 [info ] [Thread-1 (]: 4 of 8 START sql incremental model main.int_fact_listen ........................ [RUN]
+[0m08:18:49.380626 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_users, now model.dbt_project.int_fact_listen)
+[0m08:18:49.380774 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_fact_listen
+[0m08:18:49.382154 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_fact_listen"
+[0m08:18:49.382443 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_fact_listen
+[0m08:18:49.402836 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:49.403136 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_fact_listen"} */
+
+    
+  
+    
+    
+
+    create temporary table
+      "int_fact_listen__dbt_tmp20240924081849396770"
+  
+    as (
+      
+
+with cte_int_listen as (
+
+    select * from "moovitamix"."main"."src_listen"
+
+)
+
+--INSERT INTO int_listen
+select *
+from cte_int_listen
+    );
+  
+  
+  
+[0m08:18:49.403312 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.408198 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m08:18:49.411782 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:49.411971 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: BEGIN
+[0m08:18:49.412176 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.412329 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:49.412487 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_fact_listen"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'int_fact_listen__dbt_tmp20240924081849396770'
+      
+      
+      order by ordinal_position
+
+  
+[0m08:18:49.423647 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m08:18:49.426083 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:49.426274 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_fact_listen"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'int_fact_listen'
+      
+      and table_schema = 'main'
+      
+      
+      and table_catalog = 'moovitamix'
+      
+      order by ordinal_position
+
+  
+[0m08:18:49.427870 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:49.431458 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:49.431657 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_fact_listen"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from system.information_schema.columns
+      where table_name = 'int_fact_listen'
+      
+      and table_schema = 'main'
+      
+      
+      and table_catalog = 'moovitamix'
+      
+      order by ordinal_position
+
+  
+[0m08:18:49.433206 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:49.441193 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_fact_listen"
+[0m08:18:49.441632 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:49.441805 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_fact_listen"} */
+
+
+    insert into "moovitamix"."main"."int_fact_listen" ("user_id", "track_id", "listen_timestamp")
+    (
+        select "user_id", "track_id", "listen_timestamp"
+        from "int_fact_listen__dbt_tmp20240924081849396770"
+    )
+  
+[0m08:18:49.442844 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:49.443553 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: COMMIT
+[0m08:18:49.443717 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:18:49.443860 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: COMMIT
+[0m08:18:49.444150 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.444477 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: Close
+[0m08:18:49.445349 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104a74110>]}
+[0m08:18:49.445644 [info ] [Thread-1 (]: 4 of 8 OK created sql incremental model main.int_fact_listen ................... [[32mOK[0m in 0.06s]
+[0m08:18:49.445905 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_fact_listen
+[0m08:18:49.446095 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_tracks
+[0m08:18:49.446336 [info ] [Thread-1 (]: 5 of 8 START sql incremental model main.int_dim_tracks ......................... [RUN]
+[0m08:18:49.446542 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_fact_listen, now model.dbt_project.int_dim_tracks)
+[0m08:18:49.446702 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_dim_tracks
+[0m08:18:49.448057 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_dim_tracks"
+[0m08:18:49.448428 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_dim_tracks
+[0m08:18:49.450073 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_dim_tracks"
+[0m08:18:49.450374 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_tracks"
+[0m08:18:49.450527 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: BEGIN
+[0m08:18:49.450678 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.453493 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:49.453680 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_tracks"
+[0m08:18:49.453849 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_dim_tracks"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."int_dim_tracks"
+  
+    as (
+      
+
+with cte_src_tracks as (
+
+    select * from "moovitamix"."main"."src_tracks"
+
+)
+
+--INSERT INTO int_tracks
+select *
+from cte_src_tracks
+    );
+  
+  
+  
+[0m08:18:49.454500 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.456929 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: COMMIT
+[0m08:18:49.457110 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_tracks"
+[0m08:18:49.457259 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: COMMIT
+[0m08:18:49.457640 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.457991 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: Close
+[0m08:18:49.460496 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104fc4170>]}
+[0m08:18:49.460788 [info ] [Thread-1 (]: 5 of 8 OK created sql incremental model main.int_dim_tracks .................... [[32mOK[0m in 0.01s]
+[0m08:18:49.461036 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_tracks
+[0m08:18:49.461230 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_users
+[0m08:18:49.461525 [info ] [Thread-1 (]: 6 of 8 START sql incremental model main.int_dim_users .......................... [RUN]
+[0m08:18:49.461748 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_dim_tracks, now model.dbt_project.int_dim_users)
+[0m08:18:49.461912 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_dim_users
+[0m08:18:49.463310 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_dim_users"
+[0m08:18:49.463680 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_dim_users
+[0m08:18:49.465227 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_dim_users"
+[0m08:18:49.465531 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_users"
+[0m08:18:49.465681 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: BEGIN
+[0m08:18:49.465820 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.468802 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:49.469041 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_users"
+[0m08:18:49.469216 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_dim_users"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."int_dim_users"
+  
+    as (
+      
+
+with cte_src_users as (
+
+    select * from "moovitamix"."main"."src_users"
+
+)
+
+--INSERT INTO int_users
+select *
+from cte_src_users
+    );
+  
+  
+  
+[0m08:18:49.470884 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:18:49.471746 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: COMMIT
+[0m08:18:49.471903 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_users"
+[0m08:18:49.472046 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: COMMIT
+[0m08:18:49.472468 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.472829 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: Close
+[0m08:18:49.475401 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b11160>]}
+[0m08:18:49.475684 [info ] [Thread-1 (]: 6 of 8 OK created sql incremental model main.int_dim_users ..................... [[32mOK[0m in 0.01s]
+[0m08:18:49.475933 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_users
+[0m08:18:49.476113 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_tracks
+[0m08:18:49.476403 [info ] [Thread-1 (]: 7 of 8 START sql table model main.mart_listen_and_tracks ....................... [RUN]
+[0m08:18:49.476627 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_dim_users, now model.dbt_project.mart_listen_and_tracks)
+[0m08:18:49.476789 [debug] [Thread-1 (]: Began compiling node model.dbt_project.mart_listen_and_tracks
+[0m08:18:49.478529 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.mart_listen_and_tracks"
+[0m08:18:49.478900 [debug] [Thread-1 (]: Began executing node model.dbt_project.mart_listen_and_tracks
+[0m08:18:49.485231 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.mart_listen_and_tracks"
+[0m08:18:49.485623 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:18:49.485785 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: BEGIN
+[0m08:18:49.485930 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.488877 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:49.489059 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:18:49.489229 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_tracks"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."mart_listen_and_tracks__dbt_tmp"
+  
+    as (
+      
+
+with mart_listen_and_tracks as (
+
+SELECT *
+FROM  "moovitamix"."main"."int_fact_listen" AS l
+LEFT JOIN "moovitamix"."main"."int_dim_tracks" as r
+ON l.track_id = r.id
+
+)
+
+select * from mart_listen_and_tracks
+    );
+  
+  
+[0m08:18:49.491171 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:18:49.492682 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:18:49.492881 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_tracks"} */
+alter table "moovitamix"."main"."mart_listen_and_tracks__dbt_tmp" rename to "mart_listen_and_tracks"
+[0m08:18:49.493262 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.494115 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: COMMIT
+[0m08:18:49.494278 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:18:49.494426 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: COMMIT
+[0m08:18:49.494936 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.496099 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:18:49.496267 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_tracks"} */
+drop table if exists "moovitamix"."main"."mart_listen_and_tracks__dbt_backup" cascade
+[0m08:18:49.496493 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.497120 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: Close
+[0m08:18:49.499871 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050f72c0>]}
+[0m08:18:49.500181 [info ] [Thread-1 (]: 7 of 8 OK created sql table model main.mart_listen_and_tracks .................. [[32mOK[0m in 0.02s]
+[0m08:18:49.500455 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_tracks
+[0m08:18:49.500640 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_users
+[0m08:18:49.500862 [info ] [Thread-1 (]: 8 of 8 START sql table model main.mart_listen_and_users ........................ [RUN]
+[0m08:18:49.501052 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.mart_listen_and_tracks, now model.dbt_project.mart_listen_and_users)
+[0m08:18:49.501207 [debug] [Thread-1 (]: Began compiling node model.dbt_project.mart_listen_and_users
+[0m08:18:49.502758 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.mart_listen_and_users"
+[0m08:18:49.503132 [debug] [Thread-1 (]: Began executing node model.dbt_project.mart_listen_and_users
+[0m08:18:49.504585 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.mart_listen_and_users"
+[0m08:18:49.504867 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:18:49.505012 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: BEGIN
+[0m08:18:49.505151 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:18:49.508208 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:18:49.508396 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:18:49.508566 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_users"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."mart_listen_and_users__dbt_tmp"
+  
+    as (
+      
+
+with mart_listen_and_tracks as (
+
+SELECT *
+FROM  "moovitamix"."main"."int_fact_listen" AS l
+LEFT JOIN "moovitamix"."main"."int_dim_users" as r
+ON l.user_id = r.id
+
+)
+
+select * from mart_listen_and_tracks
+    );
+  
+  
+[0m08:18:49.509107 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.510697 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:18:49.510894 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_users"} */
+alter table "moovitamix"."main"."mart_listen_and_users__dbt_tmp" rename to "mart_listen_and_users"
+[0m08:18:49.511208 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.511914 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: COMMIT
+[0m08:18:49.512062 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:18:49.512200 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: COMMIT
+[0m08:18:49.512573 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.513644 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:18:49.513807 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_users"} */
+drop table if exists "moovitamix"."main"."mart_listen_and_users__dbt_backup" cascade
+[0m08:18:49.514026 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:18:49.514629 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: Close
+[0m08:18:49.517427 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1416d774-ff75-4edf-b715-9b4be00a1cb0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104f972f0>]}
+[0m08:18:49.517770 [info ] [Thread-1 (]: 8 of 8 OK created sql table model main.mart_listen_and_users ................... [[32mOK[0m in 0.02s]
+[0m08:18:49.518081 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_users
+[0m08:18:49.518721 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:49.518898 [debug] [MainThread]: On master: BEGIN
+[0m08:18:49.519031 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:18:49.522449 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:18:49.522672 [debug] [MainThread]: On master: COMMIT
+[0m08:18:49.522813 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:18:49.522938 [debug] [MainThread]: On master: COMMIT
+[0m08:18:49.523106 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:18:49.523237 [debug] [MainThread]: On master: Close
+[0m08:18:49.523784 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:18:49.523922 [debug] [MainThread]: Connection 'model.dbt_project.mart_listen_and_users' was properly closed.
+[0m08:18:49.524102 [info ] [MainThread]: 
+[0m08:18:49.524248 [info ] [MainThread]: Finished running 3 view models, 3 incremental models, 2 table models in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m08:18:49.524928 [debug] [MainThread]: Command end result
+[0m08:18:49.539127 [info ] [MainThread]: 
+[0m08:18:49.539351 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:18:49.539502 [info ] [MainThread]: 
+[0m08:18:49.539651 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m08:18:49.541059 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.80794024, "process_user_time": 1.186377, "process_kernel_time": 0.168507, "process_mem_max_rss": "141983744", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:18:49.541346 [debug] [MainThread]: Command `dbt run` succeeded at 08:18:49.541299 after 0.81 seconds
+[0m08:18:49.541532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103c9b170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104af6b70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104bb1eb0>]}
+[0m08:18:49.541697 [debug] [MainThread]: Flushing usage events
+[0m08:48:47.587383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d3a6c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cf6c90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cf6990>]}
+
+
+============================== 08:48:47.590302 | 1d1fee12-eef3-415f-90cc-3dbe79a0f1a1 ==============================
+[0m08:48:47.590302 [info ] [MainThread]: Running with dbt=1.8.6
+[0m08:48:47.590619 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/brossierlucas/programmation/moovai_pipeline-master/Docker_Airflow/modeling/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/brossierlucas/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:48:47.772634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cf6c00>]}
+[0m08:48:47.796147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d20d10>]}
+[0m08:48:47.798042 [info ] [MainThread]: Registered adapter: duckdb=1.8.3
+[0m08:48:47.807951 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m08:48:47.870415 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:48:47.870659 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:48:47.891262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1070fe810>]}
+[0m08:48:47.945682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107009580>]}
+[0m08:48:47.945976 [info ] [MainThread]: Found 8 models, 4 data tests, 3 sources, 416 macros
+[0m08:48:47.946152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10712d400>]}
+[0m08:48:47.947162 [info ] [MainThread]: 
+[0m08:48:47.947445 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m08:48:47.949824 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_moovitamix'
+[0m08:48:47.978828 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix"
+[0m08:48:47.979065 [debug] [ThreadPool]: On list_moovitamix: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m08:48:47.979213 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:48:47.993836 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m08:48:47.995197 [debug] [ThreadPool]: On list_moovitamix: Close
+[0m08:48:47.996862 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_moovitamix, now create_moovitamix_main)
+[0m08:48:47.997111 [debug] [ThreadPool]: Creating schema "database: "moovitamix"
+schema: "main"
+"
+[0m08:48:48.000566 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:48:48.000781 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='moovitamix'
+        and type='sqlite'
+    
+  
+[0m08:48:48.000929 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:48:48.004577 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m08:48:48.005558 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:48:48.005731 [debug] [ThreadPool]: On create_moovitamix_main: BEGIN
+[0m08:48:48.005925 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:48:48.006059 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:48:48.006186 [debug] [ThreadPool]: On create_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "create_moovitamix_main"} */
+
+    
+    
+        create schema if not exists "moovitamix"."main"
+    
+[0m08:48:48.006945 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m08:48:48.007376 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:48:48.007511 [debug] [ThreadPool]: Using duckdb connection "create_moovitamix_main"
+[0m08:48:48.007630 [debug] [ThreadPool]: On create_moovitamix_main: COMMIT
+[0m08:48:48.007795 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m08:48:48.007923 [debug] [ThreadPool]: On create_moovitamix_main: Close
+[0m08:48:48.009111 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_moovitamix_main, now list_moovitamix_main)
+[0m08:48:48.012705 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:48:48.012903 [debug] [ThreadPool]: On list_moovitamix_main: BEGIN
+[0m08:48:48.013033 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:48:48.016007 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m08:48:48.016208 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix_main"
+[0m08:48:48.016353 [debug] [ThreadPool]: On list_moovitamix_main: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix_main"} */
+select
+      'moovitamix' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'moovitamix'
+  
+[0m08:48:48.030022 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m08:48:48.030890 [debug] [ThreadPool]: On list_moovitamix_main: ROLLBACK
+[0m08:48:48.031937 [debug] [ThreadPool]: Failed to rollback 'list_moovitamix_main'
+[0m08:48:48.032110 [debug] [ThreadPool]: On list_moovitamix_main: Close
+[0m08:48:48.033248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b81d30>]}
+[0m08:48:48.033474 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:48:48.033604 [debug] [MainThread]: On master: BEGIN
+[0m08:48:48.033717 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:48:48.036550 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:48:48.036718 [debug] [MainThread]: On master: COMMIT
+[0m08:48:48.036851 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:48:48.036968 [debug] [MainThread]: On master: COMMIT
+[0m08:48:48.037120 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:48:48.037246 [debug] [MainThread]: On master: Close
+[0m08:48:48.037749 [info ] [MainThread]: Concurrency: 1 threads (target='local')
+[0m08:48:48.037915 [info ] [MainThread]: 
+[0m08:48:48.039254 [debug] [Thread-1 (]: Began running node model.dbt_project.src_listen
+[0m08:48:48.039514 [info ] [Thread-1 (]: 1 of 8 START sql view model main.src_listen .................................... [RUN]
+[0m08:48:48.039720 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_moovitamix_main, now model.dbt_project.src_listen)
+[0m08:48:48.039877 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_listen
+[0m08:48:48.043366 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_listen"
+[0m08:48:48.043746 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_listen
+[0m08:48:48.059151 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_listen"
+[0m08:48:48.059688 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:48:48.059876 [debug] [Thread-1 (]: On model.dbt_project.src_listen: BEGIN
+[0m08:48:48.060040 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.063158 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.063365 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:48:48.063521 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+
+  
+  create view "moovitamix"."main"."src_listen__dbt_tmp" as (
+    
+
+with cte_src_listen as (
+
+
+    select * from moovitamix.listen_history
+    WHERE listen_timestamp = CURRENT_DATE
+)
+
+select *
+from cte_src_listen
+  );
+
+[0m08:48:48.065624 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:48:48.068888 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:48:48.069090 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+alter view "moovitamix"."main"."src_listen__dbt_tmp" rename to "src_listen"
+[0m08:48:48.069896 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:48:48.076913 [debug] [Thread-1 (]: On model.dbt_project.src_listen: COMMIT
+[0m08:48:48.077119 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:48:48.077276 [debug] [Thread-1 (]: On model.dbt_project.src_listen: COMMIT
+[0m08:48:48.078317 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:48:48.080617 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_listen"
+[0m08:48:48.080797 [debug] [Thread-1 (]: On model.dbt_project.src_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_listen"} */
+drop view if exists "moovitamix"."main"."src_listen__dbt_backup" cascade
+[0m08:48:48.081025 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.082094 [debug] [Thread-1 (]: On model.dbt_project.src_listen: Close
+[0m08:48:48.087003 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107036ae0>]}
+[0m08:48:48.087318 [info ] [Thread-1 (]: 1 of 8 OK created sql view model main.src_listen ............................... [[32mOK[0m in 0.05s]
+[0m08:48:48.087599 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_listen
+[0m08:48:48.087808 [debug] [Thread-1 (]: Began running node model.dbt_project.src_tracks
+[0m08:48:48.088094 [info ] [Thread-1 (]: 2 of 8 START sql view model main.src_tracks .................................... [RUN]
+[0m08:48:48.088290 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_listen, now model.dbt_project.src_tracks)
+[0m08:48:48.088442 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_tracks
+[0m08:48:48.089735 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_tracks"
+[0m08:48:48.090730 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_tracks
+[0m08:48:48.092333 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_tracks"
+[0m08:48:48.092625 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:48:48.092776 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: BEGIN
+[0m08:48:48.092921 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.096065 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.096247 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:48:48.096400 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+
+  
+  create view "moovitamix"."main"."src_tracks__dbt_tmp" as (
+    
+
+with cte_src_tracks as (
+
+
+    select * from moovitamix.tracks
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_tracks
+  );
+
+[0m08:48:48.096748 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.098209 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:48:48.098369 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+alter view "moovitamix"."main"."src_tracks__dbt_tmp" rename to "src_tracks"
+[0m08:48:48.098590 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.099329 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: COMMIT
+[0m08:48:48.099478 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:48:48.099617 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: COMMIT
+[0m08:48:48.100061 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.101185 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_tracks"
+[0m08:48:48.101382 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_tracks"} */
+drop view if exists "moovitamix"."main"."src_tracks__dbt_backup" cascade
+[0m08:48:48.101672 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.102420 [debug] [Thread-1 (]: On model.dbt_project.src_tracks: Close
+[0m08:48:48.105526 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107036ae0>]}
+[0m08:48:48.105875 [info ] [Thread-1 (]: 2 of 8 OK created sql view model main.src_tracks ............................... [[32mOK[0m in 0.02s]
+[0m08:48:48.106163 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_tracks
+[0m08:48:48.106355 [debug] [Thread-1 (]: Began running node model.dbt_project.src_users
+[0m08:48:48.106626 [info ] [Thread-1 (]: 3 of 8 START sql view model main.src_users ..................................... [RUN]
+[0m08:48:48.106818 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_tracks, now model.dbt_project.src_users)
+[0m08:48:48.106974 [debug] [Thread-1 (]: Began compiling node model.dbt_project.src_users
+[0m08:48:48.109100 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.src_users"
+[0m08:48:48.109453 [debug] [Thread-1 (]: Began executing node model.dbt_project.src_users
+[0m08:48:48.110914 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.src_users"
+[0m08:48:48.111220 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:48:48.111371 [debug] [Thread-1 (]: On model.dbt_project.src_users: BEGIN
+[0m08:48:48.111507 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.114384 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.114570 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:48:48.114734 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+
+  
+  create view "moovitamix"."main"."src_users__dbt_tmp" as (
+    
+
+with cte_src_users as (
+
+    select * from moovitamix.users
+    WHERE created_at = CURRENT_DATE
+
+)
+
+select *
+from cte_src_users
+  );
+
+[0m08:48:48.115086 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.116692 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:48:48.116873 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+alter view "moovitamix"."main"."src_users__dbt_tmp" rename to "src_users"
+[0m08:48:48.117133 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.117861 [debug] [Thread-1 (]: On model.dbt_project.src_users: COMMIT
+[0m08:48:48.118013 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:48:48.118153 [debug] [Thread-1 (]: On model.dbt_project.src_users: COMMIT
+[0m08:48:48.118542 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.119629 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.src_users"
+[0m08:48:48.119786 [debug] [Thread-1 (]: On model.dbt_project.src_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.src_users"} */
+drop view if exists "moovitamix"."main"."src_users__dbt_backup" cascade
+[0m08:48:48.120010 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.120596 [debug] [Thread-1 (]: On model.dbt_project.src_users: Close
+[0m08:48:48.123285 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075718b0>]}
+[0m08:48:48.123586 [info ] [Thread-1 (]: 3 of 8 OK created sql view model main.src_users ................................ [[32mOK[0m in 0.02s]
+[0m08:48:48.123844 [debug] [Thread-1 (]: Finished running node model.dbt_project.src_users
+[0m08:48:48.124030 [debug] [Thread-1 (]: Began running node model.dbt_project.int_fact_listen
+[0m08:48:48.124304 [info ] [Thread-1 (]: 4 of 8 START sql incremental model main.int_fact_listen ........................ [RUN]
+[0m08:48:48.124510 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.src_users, now model.dbt_project.int_fact_listen)
+[0m08:48:48.124669 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_fact_listen
+[0m08:48:48.126141 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_fact_listen"
+[0m08:48:48.126557 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_fact_listen
+[0m08:48:48.146194 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_fact_listen"
+[0m08:48:48.146705 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:48:48.146874 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: BEGIN
+[0m08:48:48.147017 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.149927 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.150132 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:48:48.150293 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_fact_listen"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."int_fact_listen"
+  
+    as (
+      
+
+with cte_int_listen as (
+
+    select * from "moovitamix"."main"."src_listen"
+
+)
+
+--INSERT INTO int_listen
+select *
+from cte_int_listen
+    );
+  
+  
+  
+[0m08:48:48.151793 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:48:48.154192 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: COMMIT
+[0m08:48:48.154369 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_fact_listen"
+[0m08:48:48.154520 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: COMMIT
+[0m08:48:48.154888 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.155225 [debug] [Thread-1 (]: On model.dbt_project.int_fact_listen: Close
+[0m08:48:48.157927 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107572900>]}
+[0m08:48:48.158272 [info ] [Thread-1 (]: 4 of 8 OK created sql incremental model main.int_fact_listen ................... [[32mOK[0m in 0.03s]
+[0m08:48:48.158546 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_fact_listen
+[0m08:48:48.158736 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_tracks
+[0m08:48:48.158961 [info ] [Thread-1 (]: 5 of 8 START sql incremental model main.int_dim_tracks ......................... [RUN]
+[0m08:48:48.159154 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_fact_listen, now model.dbt_project.int_dim_tracks)
+[0m08:48:48.159308 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_dim_tracks
+[0m08:48:48.160796 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_dim_tracks"
+[0m08:48:48.161328 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_dim_tracks
+[0m08:48:48.162938 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_dim_tracks"
+[0m08:48:48.163241 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_tracks"
+[0m08:48:48.163389 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: BEGIN
+[0m08:48:48.163527 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.166440 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.166623 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_tracks"
+[0m08:48:48.166785 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_dim_tracks"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."int_dim_tracks"
+  
+    as (
+      
+
+with cte_src_tracks as (
+
+    select * from "moovitamix"."main"."src_tracks"
+
+)
+
+--INSERT INTO int_tracks
+select *
+from cte_src_tracks
+    );
+  
+  
+  
+[0m08:48:48.167429 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.168167 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: COMMIT
+[0m08:48:48.168316 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_tracks"
+[0m08:48:48.168460 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: COMMIT
+[0m08:48:48.168885 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.169232 [debug] [Thread-1 (]: On model.dbt_project.int_dim_tracks: Close
+[0m08:48:48.172146 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10748aff0>]}
+[0m08:48:48.172502 [info ] [Thread-1 (]: 5 of 8 OK created sql incremental model main.int_dim_tracks .................... [[32mOK[0m in 0.01s]
+[0m08:48:48.172768 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_tracks
+[0m08:48:48.172964 [debug] [Thread-1 (]: Began running node model.dbt_project.int_dim_users
+[0m08:48:48.173271 [info ] [Thread-1 (]: 6 of 8 START sql incremental model main.int_dim_users .......................... [RUN]
+[0m08:48:48.173502 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_dim_tracks, now model.dbt_project.int_dim_users)
+[0m08:48:48.173674 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_dim_users
+[0m08:48:48.175143 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_dim_users"
+[0m08:48:48.175485 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_dim_users
+[0m08:48:48.177861 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_dim_users"
+[0m08:48:48.178179 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_users"
+[0m08:48:48.178339 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: BEGIN
+[0m08:48:48.178477 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.181545 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.181778 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_users"
+[0m08:48:48.181947 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.int_dim_users"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."int_dim_users"
+  
+    as (
+      
+
+with cte_src_users as (
+
+    select * from "moovitamix"."main"."src_users"
+
+)
+
+--INSERT INTO int_users
+select *
+from cte_src_users
+    );
+  
+  
+  
+[0m08:48:48.183559 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m08:48:48.184385 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: COMMIT
+[0m08:48:48.184557 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_dim_users"
+[0m08:48:48.184702 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: COMMIT
+[0m08:48:48.185095 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.185430 [debug] [Thread-1 (]: On model.dbt_project.int_dim_users: Close
+[0m08:48:48.188121 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075d1160>]}
+[0m08:48:48.188413 [info ] [Thread-1 (]: 6 of 8 OK created sql incremental model main.int_dim_users ..................... [[32mOK[0m in 0.01s]
+[0m08:48:48.188660 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_dim_users
+[0m08:48:48.188845 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_tracks
+[0m08:48:48.189107 [info ] [Thread-1 (]: 7 of 8 START sql table model main.mart_listen_and_tracks ....................... [RUN]
+[0m08:48:48.189296 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_dim_users, now model.dbt_project.mart_listen_and_tracks)
+[0m08:48:48.189451 [debug] [Thread-1 (]: Began compiling node model.dbt_project.mart_listen_and_tracks
+[0m08:48:48.191180 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.mart_listen_and_tracks"
+[0m08:48:48.191584 [debug] [Thread-1 (]: Began executing node model.dbt_project.mart_listen_and_tracks
+[0m08:48:48.197762 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.mart_listen_and_tracks"
+[0m08:48:48.198297 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:48:48.198467 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: BEGIN
+[0m08:48:48.198632 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.201650 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.201840 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:48:48.202006 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_tracks"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."mart_listen_and_tracks__dbt_tmp"
+  
+    as (
+      
+
+with mart_listen_and_tracks as (
+
+SELECT *
+FROM  "moovitamix"."main"."int_fact_listen" AS l
+LEFT JOIN "moovitamix"."main"."int_dim_tracks" as r
+ON l.track_id = r.id
+
+)
+
+select * from mart_listen_and_tracks
+    );
+  
+  
+[0m08:48:48.204457 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m08:48:48.205982 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:48:48.206153 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_tracks"} */
+alter table "moovitamix"."main"."mart_listen_and_tracks__dbt_tmp" rename to "mart_listen_and_tracks"
+[0m08:48:48.206392 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.207084 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: COMMIT
+[0m08:48:48.207240 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:48:48.207378 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: COMMIT
+[0m08:48:48.207777 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.208820 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_tracks"
+[0m08:48:48.208975 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_tracks"} */
+drop table if exists "moovitamix"."main"."mart_listen_and_tracks__dbt_backup" cascade
+[0m08:48:48.209181 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.209788 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_tracks: Close
+[0m08:48:48.213022 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107152a50>]}
+[0m08:48:48.213415 [info ] [Thread-1 (]: 7 of 8 OK created sql table model main.mart_listen_and_tracks .................. [[32mOK[0m in 0.02s]
+[0m08:48:48.213696 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_tracks
+[0m08:48:48.213894 [debug] [Thread-1 (]: Began running node model.dbt_project.mart_listen_and_users
+[0m08:48:48.214147 [info ] [Thread-1 (]: 8 of 8 START sql table model main.mart_listen_and_users ........................ [RUN]
+[0m08:48:48.214365 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.mart_listen_and_tracks, now model.dbt_project.mart_listen_and_users)
+[0m08:48:48.214532 [debug] [Thread-1 (]: Began compiling node model.dbt_project.mart_listen_and_users
+[0m08:48:48.216402 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.mart_listen_and_users"
+[0m08:48:48.216763 [debug] [Thread-1 (]: Began executing node model.dbt_project.mart_listen_and_users
+[0m08:48:48.218222 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.mart_listen_and_users"
+[0m08:48:48.218518 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:48:48.218669 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: BEGIN
+[0m08:48:48.218809 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:48:48.221873 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m08:48:48.222066 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:48:48.222236 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_users"} */
+
+  
+    
+    
+
+    create  table
+      "moovitamix"."main"."mart_listen_and_users__dbt_tmp"
+  
+    as (
+      
+
+with mart_listen_and_tracks as (
+
+SELECT *
+FROM  "moovitamix"."main"."int_fact_listen" AS l
+LEFT JOIN "moovitamix"."main"."int_dim_users" as r
+ON l.user_id = r.id
+
+)
+
+select * from mart_listen_and_tracks
+    );
+  
+  
+[0m08:48:48.222812 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.224518 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:48:48.224703 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_users"} */
+alter table "moovitamix"."main"."mart_listen_and_users__dbt_tmp" rename to "mart_listen_and_users"
+[0m08:48:48.224992 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.225677 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: COMMIT
+[0m08:48:48.225842 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:48:48.225986 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: COMMIT
+[0m08:48:48.226352 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.227371 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.mart_listen_and_users"
+[0m08:48:48.227533 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "dbt_project", "target_name": "local", "node_id": "model.dbt_project.mart_listen_and_users"} */
+drop table if exists "moovitamix"."main"."mart_listen_and_users__dbt_backup" cascade
+[0m08:48:48.227773 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m08:48:48.228363 [debug] [Thread-1 (]: On model.dbt_project.mart_listen_and_users: Close
+[0m08:48:48.231225 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d1fee12-eef3-415f-90cc-3dbe79a0f1a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075817f0>]}
+[0m08:48:48.231524 [info ] [Thread-1 (]: 8 of 8 OK created sql table model main.mart_listen_and_users ................... [[32mOK[0m in 0.02s]
+[0m08:48:48.231784 [debug] [Thread-1 (]: Finished running node model.dbt_project.mart_listen_and_users
+[0m08:48:48.232372 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:48:48.232516 [debug] [MainThread]: On master: BEGIN
+[0m08:48:48.232636 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:48:48.235896 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m08:48:48.236095 [debug] [MainThread]: On master: COMMIT
+[0m08:48:48.236231 [debug] [MainThread]: Using duckdb connection "master"
+[0m08:48:48.236362 [debug] [MainThread]: On master: COMMIT
+[0m08:48:48.236528 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m08:48:48.236667 [debug] [MainThread]: On master: Close
+[0m08:48:48.237254 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:48:48.237426 [debug] [MainThread]: Connection 'model.dbt_project.mart_listen_and_users' was properly closed.
+[0m08:48:48.237626 [info ] [MainThread]: 
+[0m08:48:48.237783 [info ] [MainThread]: Finished running 3 view models, 3 incremental models, 2 table models in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m08:48:48.238431 [debug] [MainThread]: Command end result
+[0m08:48:48.252180 [info ] [MainThread]: 
+[0m08:48:48.252414 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:48:48.252570 [info ] [MainThread]: 
+[0m08:48:48.252721 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m08:48:48.254032 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.70108885, "process_user_time": 1.08995, "process_kernel_time": 0.174199, "process_mem_max_rss": "137150464", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m08:48:48.254278 [debug] [MainThread]: Command `dbt run` succeeded at 08:48:48.254237 after 0.70 seconds
+[0m08:48:48.254453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cae1b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105558fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074b8410>]}
+[0m08:48:48.254607 [debug] [MainThread]: Flushing usage events
