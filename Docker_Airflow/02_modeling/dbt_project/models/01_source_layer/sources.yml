@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: moovai_data
+    tables:
+      - name: tracks
+      - name: users
+      - name: listen_history

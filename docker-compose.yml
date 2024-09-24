@@ -1,0 +1,21 @@
+version: '3'
+services:
+  pipeline:
+    build: 
+      context: ./Pipeline
+      dockerfile: Dockerfile
+    container_name: pipeline
+    ports:
+      - 8000:80
+    restart: always
+
+  airflow:
+    build:
+      context: ./Docker_Airflow
+      dockerfile: Dockerfile
+    container_name: airflow
+    restart: always
+    ports:
+      - 8001:8080
+    volumes:
+      - ./data:/usr/local/airflow/data
