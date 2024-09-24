@@ -19,3 +19,5 @@ services:
       - 8001:8080
     volumes:
       - ./data:/usr/local/airflow/data
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False

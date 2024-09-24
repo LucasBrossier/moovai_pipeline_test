@@ -3,7 +3,7 @@
 with cte_src_tracks as (
 
 
-    select * from moovai_data.tracks
+    select * from moovitamix.tracks
     WHERE created_at = CURRENT_DATE
 
 )

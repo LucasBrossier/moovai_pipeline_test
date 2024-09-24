@@ -1,0 +1,7 @@
+dbt_project:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      threads: 1
+      path: '/usr/local/airflow/data/moovitamix.db'

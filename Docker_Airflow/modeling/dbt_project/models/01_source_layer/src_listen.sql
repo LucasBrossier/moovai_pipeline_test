@@ -3,7 +3,7 @@
 with cte_src_listen as (
 
 
-    select * from moovai_data.listen_history
+    select * from moovitamix.listen_history
     WHERE listen_timestamp = CURRENT_DATE
 )
 

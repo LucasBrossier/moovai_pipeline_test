@@ -2,7 +2,7 @@
 
 with cte_src_users as (
 
-    select * from moovai_data.users
+    select * from moovitamix.users
     WHERE created_at = CURRENT_DATE
 
 )

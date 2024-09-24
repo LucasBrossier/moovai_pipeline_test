@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 # Crée le répertoire Airflow
 RUN mkdir -p $AIRFLOW_HOME
-
+RUN mkdir -p $AIRFLOW_HOME/dags/
 # Installe Airflow
 RUN pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 
@@ -28,10 +28,13 @@ WORKDIR $AIRFLOW_HOME
 # Expose le port du serveur web Airflow
 EXPOSE 8080
 
-COPY *.py /${AIRFLOW_HOME}/dags/.
-COPY requirements.txt /${AIRFLOW_HOME}/dags/.
-COPY 0* /${AIRFLOW_HOME}/.
-RUN cd dags && pip install -r requirements.txt
+COPY *.py ${AIRFLOW_HOME}/dags/.
+COPY requirements.txt ${AIRFLOW_HOME}/dags/.
+COPY /modeling/. ${AIRFLOW_HOME}/modeling/.
+#COPY 0* /${AIRFLOW_HOME}/.
+
+
+RUN cd dags/ && pip install -r requirements.txt
 # Initialise la base de données d'Airflow
 RUN airflow db init
 

@@ -2,7 +2,7 @@ import requests
 import duckdb
 
 # URL de base de l'API
-BASE_URL = "http://192.168.1.16:8000"
+BASE_URL = "http://192.168.0.55:8000"
 
 # Fonction générique pour récupérer toutes les données depuis l'API
 def get_all_data():
