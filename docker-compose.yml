@@ -1,19 +1,19 @@
 version: '3'
 services:
-  pipeline:
+  api_container:
     build: 
-      context: ./Pipeline
+      context: api_container
       dockerfile: Dockerfile
-    container_name: pipeline
+    container_name: api_container
     ports:
       - 8000:80
     restart: always
 
-  airflow:
+  pipeline_container:
     build:
-      context: ./Docker_Airflow
+      context: pipeline_container
       dockerfile: Dockerfile
-    container_name: airflow
+    container_name: pipeline_container
     restart: always
     ports:
       - 8001:8080

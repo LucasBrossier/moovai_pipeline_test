@@ -1,0 +1,15 @@
+version: 2
+models:
+  - name: src_listen
+    description: "ingestion"
+    columns:
+      - name: user_id
+        description: "ID de l'utilisateur"
+        data_tests :
+          - not_null
+          - unique
+      - name : track_id
+        description: "ID de la track"
+        data_tests :
+          - not_null
+          - unique
