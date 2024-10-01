@@ -2,5 +2,5 @@
 Lib/
 Scripts/
 venv/
-.idea/
+.idea
 .DS_Store
