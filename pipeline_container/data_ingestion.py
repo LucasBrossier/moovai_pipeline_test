@@ -50,8 +50,11 @@ def save_data_to_duckdb(data):
     con.execute('''
         CREATE TABLE IF NOT EXISTS users (
             id VARCHAR,
-            name VARCHAR,
+            first_name VARCHAR,
+            last_name VARCHAR,
             email VARCHAR,
+            gender VARCHAR,
+            favorite_genres VARCHAR,
             created_at TIMESTAMP,
             updated_at TIMESTAMP
         )
@@ -59,8 +62,8 @@ def save_data_to_duckdb(data):
     con.execute('''
         CREATE TABLE IF NOT EXISTS listen_history (
             user_id VARCHAR,
-            track_id VARCHAR,
-            listen_timestamp TIMESTAMP
+            items INTEGER,
+            created_at TIMESTAMP
         )
     ''')
 
@@ -84,7 +87,7 @@ def save_data_to_duckdb(data):
                         track.get('updated_at')
                     ))
                 except Exception as e:
-                    print(f"Erreur lors de l'insertion des données des tracks : {e}")
+                    print(f"Erreur lors de l'insertion des données des tracks pour l'ID {track.get('id')} : {e}")
 
     # Insertion des utilisateurs
     if data.get('users'):
@@ -92,8 +95,8 @@ def save_data_to_duckdb(data):
             if isinstance(user, dict):
                 try:
                     con.execute('''
-                        INSERT INTO users (id, name, email, created_at, updated_at)
-                        VALUES (?, ?, ?, ?, ?)
+                        INSERT INTO users (id, first_name, last_name, email, gender, favorite_genres, created_at, updated_at)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                     ''', (
                         user.get('id'),
                         user.get('first_name'),
@@ -105,29 +108,33 @@ def save_data_to_duckdb(data):
                         user.get('updated_at')
                     ))
                 except Exception as e:
-                    print(f"Erreur lors de l'insertion des données des utilisateurs : {e}")
+                    print(f"Erreur lors de l'insertion des données des utilisateurs pour l'ID {user.get('id')} : {e}")
 
-    # Insertion de l'historique d'écoute
+    # Insertion de l'historique d'écoute avec prise en charge de 'items' en tant qu'entier
     if data.get('listen_history'):
         for record in data['listen_history']:
             if isinstance(record, dict):
                 user_id = record.get('user_id')
-                updated_at = record.get('updated_at')  # Utilisation du champ 'updated_at' comme timestamp d'écoute
                 items = record.get('items', [])  # Utilisation du champ 'items' qui est une liste
+                created_at = record.get('created_at')  # Utilisation de 'created_at' comme timestamp d'écoute
+
+                print(f"Utilisateur: {user_id}, Items: {items}, Created At: {created_at}")
 
                 # Insertion de chaque item de la liste 'items'
                 for item in items:
-                    try:
-                        con.execute('''
-                            INSERT INTO listen_history (user_id, item_id, listen_timestamp)
-                            VALUES (?, ?, ?)
-                        ''', (
-                            user_id,
-                            item,  # item correspond à l'élément dans 'items'
-                            updated_at  # Utilisation de 'updated_at' comme 'listen_timestamp'
-                        ))
-                    except Exception as e:
-                        print(f"Erreur lors de l'insertion des données de l'historique d'écoute : {e}")
+                    if isinstance(item, (int, str)):  # Vérifie que 'item' est bien un 'track_id'
+                        try:
+                            con.execute('''
+                                INSERT INTO listen_history (user_id, items, created_at)
+                                VALUES (?, ?, ?)
+                            ''', (
+                                user_id,
+                                int(item),  # 'item' est maintenant un entier
+                                created_at
+                            ))
+                        except Exception as e:
+                            print(f"Erreur lors de l'insertion de l'historique d'écoute pour l'utilisateur {user_id} et le track {item} : {e}")
+
 
     con.close()
     print("Toutes les données stockées dans DuckDB")
