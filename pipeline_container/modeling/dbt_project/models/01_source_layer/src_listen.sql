@@ -2,9 +2,8 @@
 
 with cte_src_listen as (
 
-
     select * from moovitamix.listen_history
-    WHERE listen_timestamp = CURRENT_DATE
+    WHERE created_at = CURRENT_DATE
 )
 
 select *

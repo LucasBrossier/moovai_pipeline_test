@@ -25292,3 +25292,56 @@ drop table if exists "moovitamix"."main"."mart_listen_and_users__dbt_backup" cas
 [0m08:48:48.254278 [debug] [MainThread]: Command `dbt run` succeeded at 08:48:48.254237 after 0.70 seconds
 [0m08:48:48.254453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cae1b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105558fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074b8410>]}
 [0m08:48:48.254607 [debug] [MainThread]: Flushing usage events
+[0m10:41:15.490479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105cc7890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105680b90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105680b00>]}
+
+
+============================== 10:41:15.493534 | 3b2c12a6-c7dc-4aa5-95ed-efe7511db007 ==============================
+[0m10:41:15.493534 [info ] [MainThread]: Running with dbt=1.8.7
+[0m10:41:15.493880 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/brossierlucas/programmation/moovai_pipeline-master/pipeline_container/modeling/logs', 'version_check': 'True', 'profiles_dir': '/Users/brossierlucas/programmation/moovai_pipeline-master/pipeline_container/modeling', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:41:16.277377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3b2c12a6-c7dc-4aa5-95ed-efe7511db007', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106860b90>]}
+[0m10:41:16.301305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3b2c12a6-c7dc-4aa5-95ed-efe7511db007', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10632c2f0>]}
+[0m10:41:16.303452 [info ] [MainThread]: Registered adapter: duckdb=1.8.4
+[0m10:41:16.341369 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m10:41:16.393265 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m10:41:16.393590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3b2c12a6-c7dc-4aa5-95ed-efe7511db007', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d1e570>]}
+[0m10:41:16.960023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3b2c12a6-c7dc-4aa5-95ed-efe7511db007', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e0b920>]}
+[0m10:41:17.010748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3b2c12a6-c7dc-4aa5-95ed-efe7511db007', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c36c00>]}
+[0m10:41:17.011042 [info ] [MainThread]: Found 8 models, 4 data tests, 3 sources, 416 macros
+[0m10:41:17.011227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3b2c12a6-c7dc-4aa5-95ed-efe7511db007', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106bd9e20>]}
+[0m10:41:17.012206 [info ] [MainThread]: 
+[0m10:41:17.012509 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m10:41:17.014831 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_moovitamix'
+[0m10:41:17.084867 [debug] [ThreadPool]: Using duckdb connection "list_moovitamix"
+[0m10:41:17.085125 [debug] [ThreadPool]: On list_moovitamix: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m10:41:17.085283 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:41:17.089890 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "dbt_project", "target_name": "local", "connection_name": "list_moovitamix"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"moovitamix"'
+    
+  
+  
+[0m10:41:17.090164 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m10:41:17.090620 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:41:17.090767 [debug] [MainThread]: Connection 'list_moovitamix' was properly closed.
+[0m10:41:17.090919 [info ] [MainThread]: 
+[0m10:41:17.091081 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.08 seconds (0.08s).
+[0m10:41:17.091302 [error] [MainThread]: Encountered an error:
+Runtime Error
+  IO Error: Cannot open file "/usr/local/airflow/data/moovitamix.db": No such file or directory
+[0m10:41:17.092657 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.642188, "process_user_time": 1.431309, "process_kernel_time": 0.158576, "process_mem_max_rss": "127549440", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m10:41:17.092927 [debug] [MainThread]: Command `dbt run` failed at 10:41:17.092881 after 1.64 seconds
+[0m10:41:17.093106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10635c080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106dde7e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106c39580>]}
+[0m10:41:17.093284 [debug] [MainThread]: Flushing usage events
